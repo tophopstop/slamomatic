@@ -1,7 +1,17 @@
 
 var pause = false;
+var mute = false;
 
 $(document).ready(function(){
+    $('#muteBtn').click( function(){
+        if( mute == false ) {
+            mute = true;
+            $(this).text('Muted');
+        } else {
+            mute = false;
+            $(this).text('Mute');
+        }
+    });
     $('#pauseBtn').click( function(){
         if( $(this).text() == 'Paused' ) {
             $(this).text('Pause');
@@ -33,7 +43,9 @@ function slammer() {
         if( pause )
             return;
         $('#slams').prepend( $('<p class="slam">'+slam()+'</p>'));
-        playRandomSound();
+
+        if( !mute) 
+            playRandomSound();
 
         var $a = $('#slams p');
 

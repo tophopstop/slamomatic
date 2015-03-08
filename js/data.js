@@ -71,3 +71,15 @@ var t5 = [
 'wiggle',
 'thump'
 ];
+
+var sounds = [
+    'sounds/allyougot.mp3',
+    'sounds/bang.mp3',
+    'sounds/boom.mp3',
+    'sounds/click.mp3',
+    'sounds/dip.mp3',
+    'sounds/hurtsyourmomma.mp3',
+    'sounds/mommacryn.mp3',
+    'sounds/ouch.mp3',
+    'sounds/pop.mp3'
+];

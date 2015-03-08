@@ -12,9 +12,20 @@ $(document).ready(function(){
             pause = true;
         } 
     });
+    
+    // queue up the sounds
+    $.each( sounds, function(i,v){ 
+        $('#sounds').append( $('<audio id="a'+i+'" src="'+v+'" preload="auto"></audio>'));
+    });
 
     slammer();
 });
+
+function playRandomSound() {
+    var $t = $('#sounds audio');
+    var p = Math.floor(Math.random() * $t.length);
+    document.getElementById('a'+p).play();
+}
 
 function slammer() {
     ( function autoSlam() {
@@ -22,6 +33,7 @@ function slammer() {
         if( pause )
             return;
         $('#slams').prepend( $('<p class="slam">'+slam()+'</p>'));
+        playRandomSound();
 
         var $a = $('#slams p');
 

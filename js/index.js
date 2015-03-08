@@ -39,9 +39,9 @@ function playRandomSound() {
 
 function slammer() {
     ( function autoSlam() {
-        setTimeout( autoSlam, 5000);
         if( pause )
             return;
+        setTimeout( autoSlam, 5000);
         $('#slams').prepend( $('<p class="slam">'+slam()+'</p>'));
 
         if( !mute) 

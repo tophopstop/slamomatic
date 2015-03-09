@@ -42,12 +42,12 @@ function slammer() {
         if( pause )
             return;
         setTimeout( autoSlam, 5000);
-        $('#slams').prepend( $('<p class="slam">'+slam()+'</p>'));
+        $('#slams').prepend( $('<div class="panel panel-default"><div class="panel-body">'+slam()+'</div></div>'));
 
         if( !mute) 
             playRandomSound();
 
-        var $a = $('#slams p');
+        var $a = $('#slams>div');
 
         // clear special classes
         $a.removeClass('last');

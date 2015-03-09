@@ -20,11 +20,15 @@
         <h1>The Slamomatic!</h1>
         <p class="lead">20 years of pointless but amusing insults.</p>
     </div>
-    <p>
-        <button id="pauseBtn" class="btn btn-primary btn-lg">Pause</button>
-        <button id="muteBtn" class="btn btn-primary btn-lg">Mute</button>
-    </p>    
-    <div id="slams"></div>
+
+    <div class="row">
+        <div id="controls" class="col-md-2">
+            <button id="pauseBtn" class="btn btn-primary">Pause</button>
+            <button id="muteBtn" class="btn btn-primary">Mute</button>
+        </div>
+        <div id="slams" class="col-md-10">
+        </div>    
+    </div>
     <div id="sounds"></div>
 </div>    
 <script src="js/jquery.js"></script>

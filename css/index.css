@@ -1,3 +1,3 @@
-p.last { font-size: 150%; font-weight: bold; }
-p.secondLast { font-size: 125%; }
+.last { font-size: 150%; font-weight: bold; }
+.secondLast { font-size: 125%; }
 #controls button.btn { margin-bottom: 10px }
